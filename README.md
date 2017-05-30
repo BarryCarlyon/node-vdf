@@ -1,13 +1,21 @@
-node-vdf
-======
+# VDF-Reader
 
-A port of [steamodd](https://github.com/Lagg/steamodd/)'s vdf.py to node.js.
+## Introduction
 
-Tests are written for use with [nodeunit](https://github.com/caolan/nodeunit), and can be executed with `nodeunit test.js`.
+VDF-Reader is a simple fork of [node-vdf](https://github.com/RJacksonm1/node-vdf) with a couple of modifications.
 
-##Methods
-### parse(string)
-Parses a VDF string and returns an object.
+- VDF-Reader only offers a parser, no stringifier.
+- VDF-Reader supports files with duplicate keys (like CS:GO's `items_game.txt`).
 
-### dump(obj)
-Dumps an object to a VDF string.
+## Usage
+
+```javascript
+const vdf = require('vdf');
+
+let string = fs.readFileSync('items_game.txt', 'utf8');
+let parsed = vdf.parse(string);
+```
+
+## License
+
+VDF-Reader is licensed under the MIT license.

@@ -1,25 +1,22 @@
 {
-  "name": "vdf",
-  "version": "0.0.2",
-  "private": false,
-  "scripts": {
-    "start": "node vdf"
-  },
+  "name": "vdf-reader",
+  "version": "1.0.0",
+  "scripts": {},
   "dependencies": {
-    "util": "*"
-    },
+    "lodash": "^4.17.4"
+  },
   "readmeFilename": "README.md",
-  "description": "A port of steamodd's vdf.py to node.js.",
+  "description": "A VDF (KeyValues) parser.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/RJacksonm1/node-vdf.git"
+    "url": "git://github.com/RonMelkhior/node-vdf.git"
   },
   "keywords": [
     "steam",
     "valve",
     "vdf"
   ],
-  "author": "Rob Jackson",
-  "license": "ISC"
+  "author": "Ron Melkhior <ron@melkhior.io>",
+  "license": "MIT"
 }

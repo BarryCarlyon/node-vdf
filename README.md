@@ -10,7 +10,7 @@ VDF-Reader is a simple fork of [node-vdf](https://github.com/RJacksonm1/node-vdf
 ## Usage
 
 ```javascript
-const vdf = require('vdf');
+const vdf = require('vdf-reader');
 
 let string = fs.readFileSync('items_game.txt', 'utf8');
 let parsed = vdf.parse(string);

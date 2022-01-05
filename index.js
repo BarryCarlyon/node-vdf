@@ -6,8 +6,6 @@ Distributed under the ISC License (see LICENSE)
 Ported to node.js by Rob Jackson - rjackson.me.
 */
 
-const _ = require('lodash');
-
 const STRING = '"';
 const NODE_OPEN = '{';
 const NODE_CLOSE = '}';
@@ -70,7 +68,7 @@ function _parse(stream, ptr) {
             if (!deserialized[laststr])
                 deserialized[laststr] = {};
                 
-            _.merge(deserialized[laststr], parsed[0]);
+            deserialized[laststr] = {...deserialized[laststr], ...parsed[0]};
             i = parsed[1];
         } else if (c === NODE_CLOSE) {
             return [deserialized, i];
